@@ -1,12 +1,13 @@
 package com.vk;
 
-class Bookkeeper extends Employee {
-
-    public Bookkeeper(String name) {
+public class Bookkeeper extends Employee {
+    private double salary;
+    public Bookkeeper(String name, double salary) {
         super(name);
+        this.salary = salary;
     }
 
-    public String getDescription() {
-        return " bookkeeper considers salary ";
+    public double calculateSalary() {
+        return salary;
     }
 }

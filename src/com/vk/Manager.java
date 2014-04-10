@@ -1,22 +1,25 @@
 package com.vk;
 
-class Manager extends Employee {
-    private double rate;      //ставка в мес.
-    public double time;         //колличество положенных часов в мес на фиксированную ставку.
+public class Manager extends Employee {
+    private double rate;      //salary in month;
+    private double time;         //number of hours per month laid on a flat rate.
 
-    public Manager(String name, double rate, double time) {    //создаём метод считающий ЗП менеджера
+
+    public Manager(String name,double rate,double time) {
         super(name);
-        this.rate = rate;
-        this.time = time;
+        this.rate=rate;
+        this.time=time;
     }
 
-    public void setTimeInMonth(double timeInMonth) {
-        salary = timeInMonth * rate / time;
+    public double calculateSalary(double timeInMonth) {
+        double salary = timeInMonth * rate / time;
         System.out.println(getName() + " salary manager is " + salary);
+        return salary;
+
     }
 
-    public String getDescription() {
-        return " employee with a salary ";
+    @Override
+    public double calculateSalary() {
+        return 0;
     }
-
 }

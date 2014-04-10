@@ -1,17 +1,18 @@
 package com.vk;
 
-class Programmer extends Employee {
+public class Programmer extends Employee {
 
     Programmer(String name) {
         super(name);
     }
 
-    public void setSalaryProgrammer(double timeInMonth, double salaryConst) {
-        salary = timeInMonth * salaryConst;
+    public double calculateSalary(double timeInMonth,double salaryConst) {
+        double salary = timeInMonth * salaryConst;
         System.out.println(getName() + " programmer earns is " + salary);
+        return salary;
     }
-
-    public String getDescription() {
-        return " employee with a salary ";
+    @Override
+    public double calculateSalary() {
+        return 0;
     }
 }

@@ -1,20 +1,19 @@
+/*Создать абстрактный класс сотрудник. У него должны быть методы для задания ставки, количества отработанных часов,
+а также методы для получения процента отработанного времени и зарплаты за месяц.Сотрудники могут быть двух типов:
+программист и менеджер. Программист получает зарплату в соответствии с количеством отработанных часов, а менеджер
+- 100% в случае переработки и соответствующий процент в случае недоработки.
+Для класса Бухгалтер должно быть прозрачным, какого типа является сотрудник. Ему важна только зарплата за текущий месяц.*/
 package com.vk;
 
-class Starter {
+public class Starter {
     public static void main(String[] args) {
-        Manager manager = new Manager("Maks Shkvirya", 2000, 160);
-        manager.setTimeInMonth(120);
-        Programmer programmer = new Programmer("Max Mukhanov");
-        programmer.setSalaryProgrammer(120, 30);
-
-        Employee[] employee = new Employee[3];
-        employee[0] = manager;
-        employee[1] = programmer;
-        employee[2] = new Bookkeeper("Elena Kopceva");
-
-
-        for (Employee e : employee)
-            System.out.println(e.getName() + e.getDescription()+e.salary );
+        Manager manager=new Manager("Maks Shkvirya",2000,160);
+        manager.calculateSalary(120);
+        Programmer programmer=new Programmer("Max Mukhanov");
+        programmer.calculateSalary(120, 30);
 
     }
 }
+
+
+

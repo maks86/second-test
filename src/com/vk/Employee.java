@@ -1,8 +1,6 @@
 package com.vk;
-
-abstract class Employee {
+public abstract class Employee {
     private String name;
-    public double salary;
 
     public Employee(String name) {
         this.name = name;
@@ -12,6 +10,6 @@ abstract class Employee {
         return name;
     }
 
-    public abstract String getDescription();
+    public abstract double calculateSalary();
 
 }
