@@ -1,4 +1,5 @@
 package com.vk;
+
 public abstract class Employee {
     private String name;
 
@@ -11,5 +12,4 @@ public abstract class Employee {
     }
 
     public abstract double calculateSalary();
-
 }

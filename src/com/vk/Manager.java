@@ -3,23 +3,19 @@ package com.vk;
 public class Manager extends Employee {
     private double rate;      //salary in month;
     private double time;         //number of hours per month laid on a flat rate.
+    private double timeInMonth;
 
 
-    public Manager(String name,double rate,double time) {
+    public Manager(String name, double rate, double time, double timeInMonth) {
         super(name);
-        this.rate=rate;
-        this.time=time;
+        this.rate = rate;
+        this.time = time;
+        this.timeInMonth = timeInMonth;
     }
-
-    public double calculateSalary(double timeInMonth) {
-        double salary = timeInMonth * rate / time;
-        System.out.println(getName() + " salary manager is " + salary);
-        return salary;
-
-    }
-
     @Override
     public double calculateSalary() {
-        return 0;
+       double salary = timeInMonth * rate / time;
+        System.out.println(getName()+" manager with a salary: " + salary);
+        return salary;
     }
 }
