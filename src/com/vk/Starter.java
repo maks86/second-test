@@ -7,9 +7,9 @@ package com.vk;
 
 public class Starter {
     public static void main(String[] args) {
-        Manager manager = new Manager("Maks Shkvirya", 2000, 160, 120);
-        Programmer programmer = new Programmer("Max Mukhanov", 120, 30);
-        Bookkeeper bookkeeper = new Bookkeeper("Elena Kopceva ", 2000);
+        Manager manager = new Manager("Maks Shkvirya", "manager", 2000, 160, 120);
+        Programmer programmer = new Programmer("Max Mukhanov", "programmer", 120, 30);
+        Bookkeeper bookkeeper = new Bookkeeper("Elena Kopceva", "bookkeeper", 2000);
 
         Employee[] employees = new Employee[3];
         employees[0] = manager;
@@ -17,7 +17,7 @@ public class Starter {
         employees[2] = bookkeeper;
 
         for (Employee e : employees) {
-            e.calculateSalary();
+            System.out.println(e.getName() + " " + e.getSpecialty() +" salary is "+ e.calculateSalary());
         }
         System.out.println("-----------------------------");
         bookkeeper.calculateSalaryForEmployees(employees);

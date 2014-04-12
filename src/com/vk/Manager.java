@@ -6,16 +6,16 @@ public class Manager extends Employee {
     private double timeInMonth;
 
 
-    public Manager(String name, double rate, double time, double timeInMonth) {
-        super(name);
+    public Manager(String name, String specialty, double rate, double time, double timeInMonth) {
+        super(name, specialty);
         this.rate = rate;
         this.time = time;
         this.timeInMonth = timeInMonth;
     }
+
     @Override
     public double calculateSalary() {
-       double salary = timeInMonth * rate / time;
-        System.out.println(getName()+" manager with a salary: " + salary);
+        double salary = timeInMonth * rate / time;
         return salary;
     }
 }

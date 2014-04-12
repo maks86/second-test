@@ -2,21 +2,24 @@ package com.vk;
 
 public class Bookkeeper extends Employee {
     private double salary;
+    private double sum = 0;
 
-    public Bookkeeper(String name, double salary) {
-        super(name);
+    public Bookkeeper(String name, String specialty, double salary) {
+        super(name, specialty);
         this.salary = salary;
     }
+
     @Override
     public double calculateSalary() {
-        System.out.println(getName()+" bookkeeper with a salary:" + salary);
         return salary;
     }
 
     public double calculateSalaryForEmployees(Employee[] employees) {
         for (Employee ex : employees) {
-            ex.calculateSalary();
+            sum += ex.calculateSalary();
         }
+        System.out.println("total salary is " + sum);
         return salary;
     }
+
 }
