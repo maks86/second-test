@@ -13,7 +13,7 @@ public class Manager extends Employee {
         this.timeInMonth = timeInMonth;
     }
 
-    @Override
+     @Override
     public double calculateSalary() {
         double salary = timeInMonth * rate / time;
         return salary;

@@ -10,7 +10,7 @@ public class Programmer extends Employee {
         this.salaryConst = salaryConst;
     }
 
-    @Override
+     @Override
     public double calculateSalary() {
         double salary = timeInMonth * salaryConst;
         return salary;

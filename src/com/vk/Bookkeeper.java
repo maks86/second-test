@@ -9,7 +9,7 @@ public class Bookkeeper extends Employee {
         this.salary = salary;
     }
 
-    @Override
+     @Override
     public double calculateSalary() {
         return salary;
     }

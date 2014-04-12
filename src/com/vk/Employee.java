@@ -14,7 +14,7 @@ public abstract class Employee {
     }
 
     public String getSpecialty() {
-        return specialty;
+       return specialty;
     }
 
     public abstract double calculateSalary();
